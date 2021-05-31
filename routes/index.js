@@ -36,12 +36,12 @@ router.get('/redirect', (req, res, next) => {
     console.log(options)
     if (error) throw new Error(error);
 
-    console.log(body);
+    res.render('papu')
   });
 });
 
 router.get('/final', (req, res, next) => {
-  res.render('papu')
+  
 
 });
 
