@@ -11,14 +11,16 @@ router.get('/', (req, res, next) => {
 
 router.get('/redirect', (req, res, next) => {
   console.log(req.query)
-  axios.post(`https://accounts.zoho.eu/oauth/v2/token`, {
-    grant_type: "authorization_code",
-    client_id: "1000.Z2RD3B396MLYW3QR0HV4TKMSIBWKGN",
-    client_secret: "4e08acb24a427eeec83bfa290e5414a715b5e9aaf4",
-    redirect_uri: "https://zoho-crm-pulsak.herokuapp.com/final",
-    code: req.query.code
-  }, {
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+  let data = {
+    "grant_type": "authorization_code",
+    "client_id": "1000.Z2RD3B396MLYW3QR0HV4TKMSIBWKGN",
+    "client_secret": "4e08acb24a427eeec83bfa290e5414a715b5e9aaf4",
+    "redirect_uri": "https://zoho-crm-pulsak.herokuapp.com/final",
+    "code": req.query.code
+  }
+  let  = JSON.stringify(data)
+  axios.post(`https://accounts.zoho.eu/oauth/v2/token`, final_data, {
+    headers: { 'Content-Type': 'application/json' }
   })
     .then(function (response) {
       console.log(response);
