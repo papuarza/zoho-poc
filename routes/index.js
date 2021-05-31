@@ -15,7 +15,7 @@ router.get('/redirect', (req, res, next) => {
     grant_type: "authorization_code",
     client_id: "1000.KK6LLNE571SLLEFJTR6OZEJNR8S7BL",
     client_secret: "58353dd14d63550b8bbc426e13344944ee97591cec",
-    redirect_uri: "http://localhost:3000/final",
+    redirect_uri: "https://zoho-crm-pulsak.herokuapp.com/final",
     code: req.query.code
   })
   .then(function (response) {
