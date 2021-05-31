@@ -13,8 +13,8 @@ router.get('/redirect', (req, res, next) => {
   console.log(req.query.code)
   axios.post(`https://accounts.zoho.eu/oauth/v2/token`, {
     grant_type: "authorization_code",
-    client_id: "1000.KK6LLNE571SLLEFJTR6OZEJNR8S7BL",
-    client_secret: "58353dd14d63550b8bbc426e13344944ee97591cec",
+    client_id: "1000.Z2RD3B396MLYW3QR0HV4TKMSIBWKGN",
+    client_secret: "4e08acb24a427eeec83bfa290e5414a715b5e9aaf4",
     redirect_uri: "https://zoho-crm-pulsak.herokuapp.com/final",
     code: req.query.code
   })
