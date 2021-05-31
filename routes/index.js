@@ -17,7 +17,7 @@ router.get('/redirect', (req, res, next) => {
   bodyFormData.append('client_secret', '4e08acb24a427eeec83bfa290e5414a715b5e9aaf4');
   bodyFormData.append('redirect_uri', 'https://zoho-crm-pulsak.herokuapp.com/final');
   bodyFormData.append('code', req.query.code);
-
+  console.log(bodyFormData)
   axios({
     method: "post",
     url: "https://accounts.zoho.eu/oauth/v2/token?",
