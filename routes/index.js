@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/redirect', (req, res, next) => {
-
+  console.log(req.query)
   axios.post(`https://accounts.zoho.eu/oauth/v2/token`, {
     grant_type: "authorization_code",
     client_id: "1000.Z2RD3B396MLYW3QR0HV4TKMSIBWKGN",
