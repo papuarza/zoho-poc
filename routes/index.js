@@ -33,10 +33,9 @@ router.get('/redirect', (req, res, next) => {
   };
 
   request(options, function (error, response, body) {
-    console.log(options)
     if (error) throw new Error(error);
 
-    res.render('papu')
+    res.render('papu', {data: body})
   });
 });
 
