@@ -18,8 +18,8 @@ router.get('/redirect', (req, res, next) => {
     "redirect_uri": "https://zoho-crm-pulsak.herokuapp.com/final",
     "code": req.query.code
   }
-  let  = JSON.stringify(data)
-  axios.post(`https://accounts.zoho.eu/oauth/v2/token`, final_data, {
+  let final_data = JSON.stringify(data);
+  axios.post(`https://accounts.zoho.eu/oauth/v2/token?`, final_data, {
     headers: { 'Content-Type': 'application/json' }
   })
     .then(function (response) {
